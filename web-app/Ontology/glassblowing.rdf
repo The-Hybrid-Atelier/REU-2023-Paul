@@ -1,0 +1,546 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/glassblowing/"
+     xml:base="http://www.semanticweb.org/glassblowing/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/glassblowing">
+        <rdfs:comment>Ontology Questions:
+- How does tracking the motion of the maker give insight into improving glass making?
+- How can tracking the motion of a novice and an expert maker give insight about glass making?
+- How can haptics such as phantom touch help with glass making?
+- What are good traits of good glass-making techniques?
+- How can novice makers know what temperature their glass should be at?
+- How can novice makers know how fast to rotate the rod?
+- Which senses would be the least distruptive to the maker? (haptics, visual, audio, taste, smell)
+- Which senses would be the easiest to communicate with the maker? (haptics, visual, audio, taste, smell)
+- How does a maker manipulate glass using gravity?
+- How does a maker manipulate glass using other techniques?
+
+Project Ideas:
+- Speed of the roll is important********** combined with thermal would be great
+- Novice might not know where they are</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#AssistantMaker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#AssistantMaker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Maker"/>
+        <rdfs:comment>Glassblowing usually requires two person. One to assist the person making the glass. The assistant is the maker that assists the person that is in the bench or the gaffer. They assist by blowing into the blowpipe, heating up some tools they need to be heated such as the jacks, and etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#BlowTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#BlowTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#PressureTechnique"/>
+        <rdfs:comment>Technique that utilizes blowing air into the blowpipe that manipulate the shape of the glass.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#CentrifugalTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#CentrifugalTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#GravityTechnique"/>
+        <rdfs:comment>Technique that utilizes the centrifugal force to push the glass outwards.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#CentripetalTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#CentripetalTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#GravityTechnique"/>
+        <rdfs:comment>Technique that utilizes the centripetal force to compress the glass.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#CoolingEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#CoolingEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#FixtureEquipment"/>
+        <rdfs:isDefinedBy>Equipments that are used to cool tools, glass, or other materials. An example would be an annealer.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#EnviromentalEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#EnviromentalEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#FixtureEquipment"/>
+        <rdfs:isDefinedBy>Equipment that isn&apos;t used for heating or cooling.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#FaceShield -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#FaceShield">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#ProtectiveClothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#FixtureEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#FixtureEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Glassblowing"/>
+        <rdfs:comment>Fixure equipment is an equipment that stays in place like a furnace or an annealer. These generally stayed stuck to one place. There are</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#GafferMaker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#GafferMaker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Maker"/>
+        <rdfs:comment>The gaffer is the maker that is in the bench that is usually in control of the blowpipe or punty and rotating it. The gaffer is the one that uses tools such as jacks to shape the glass.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#GlassMaterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#GlassMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Material"/>
+        <rdfs:comment>Glass is a transparent solid material at room temperature. At around 1200 - 1250 degrees F, glass becomes mallaeble to manipulate the form of.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Glassblowing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#Glassblowing">
+        <rdfs:comment>Glassblowing ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Glove -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#Glove">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#ProtectiveClothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#GravityTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#GravityTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Technique"/>
+        <rdfs:comment>Technique where you rely on gravity to manipulate the glass.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#GripTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#GripTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Technique"/>
+        <rdfs:comment>This is how the maker holds and rotates the punty rod or the blowpipe. The punty rod or the blowpipe always need to be rotated for the glass to be even.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#HandTools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#HandTools">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Glassblowing"/>
+        <rdfs:comment>Hand tools are tools that are picked up by the maker by hand either at the bench, pipe warmers, or etc. The tools should be easy to pick up with one or two hands. This category was divided into two - StationHandTools and PipeWarmerHandTools. It is divided by the location where you can obtain the specific hand tools.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#HeatingEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#HeatingEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#FixtureEquipment"/>
+        <rdfs:isDefinedBy>Equipment that is used to heat up some materials such as glass, punty rod, or glasspipe. An example would be the glory hole.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Maker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#Maker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Glassblowing"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:comment>The maker is the one that is interacting with the glass and changing the form of it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Material -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#Material">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Glassblowing"/>
+        <rdfs:comment>Material is some physical substance or mass that makes up some object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#OneHandGripTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#OneHandGripTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#GripTechnique"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:comment>One handed grip. This is generally used at the bench where there is a support so the maker doesn&apos;t have to hold the punty/blowpipe with two hands.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#PersonalProtectiveEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#PersonalProtectiveEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Glassblowing"/>
+        <rdfs:comment>These are protective equipments to minimize hazards and harm to the maker from elements such as extreme heat and cuts in the hot shop.</rdfs:comment>
+        <rdfs:isDefinedBy>https://www.osha.gov/personal-protective-equipment#:~:text=Personal%20protective%20equipment%2C%20commonly%20referred,mechanical%2C%20or%20other%20workplace%20hazards.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#PipeWarmerHandTools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#PipeWarmerHandTools">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#HandTools"/>
+        <rdfs:comment>Pipe warmer hand tools are tools that can be obtained from the pipe warmers. So these would include the blowpipe and the punty.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#PressureTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#PressureTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Technique"/>
+        <rdfs:comment>Technique where you rely on pressure to manipulate the glass.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#ProtectiveClothing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#ProtectiveClothing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#PersonalProtectiveEquipment"/>
+        <rdfs:comment>Clothings that are used to keep the maker safe from harm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#StationHandTools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#StationHandTools">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#HandTools"/>
+        <rdfs:comment>Station hand tools are hand tools that can be obtained from the station or the bench. Such tools would include, jacks, twizzers, torch, and etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#SteamTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#SteamTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#PressureTechnique"/>
+        <rdfs:comment>Technique that utilizes steam pressure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Technique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#Technique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#Glassblowing"/>
+        <rdfs:comment>Techninques are ways that the maker can manipulate the form of the glass in various ways. The glass needs to be heated to a certain temperature to be malleable for it to change form.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#TwoHandGripTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#TwoHandGripTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#GripTechnique"/>
+        <rdfs:comment>Two handed grip. This is generally used when there is no support for the punty/blowpipe and when the maker is standing up.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#WeightedTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glassblowing#WeightedTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glassblowing#GravityTechnique"/>
+        <rdfs:comment>Technique where the maker holds the punty/blowpipe at a certain angle for some amount of time.
+This class should have angle property.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Annealer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Annealer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#CoolingEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Block -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Block">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#StationHandTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#BlowPipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#BlowPipe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#PipeWarmerHandTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#ClearFaceShield -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#ClearFaceShield">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#FaceShield"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#ColorRod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#ColorRod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#GlassMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#CompressedAir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#CompressedAir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#CoolingEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#CrabWalkGrip -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#CrabWalkGrip">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#OneHandGripTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Frits -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Frits">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#GlassMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#GloryHole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#GloryHole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#HeatingEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Goggles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Goggles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#ProtectiveClothing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#GoldFaceShield -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#GoldFaceShield">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#FaceShield"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Jacks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Jacks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#StationHandTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#KevlarGlove -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#KevlarGlove">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#Glove"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#KevlarSleeves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#KevlarSleeves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#ProtectiveClothing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Marver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Marver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#EnviromentalEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#NewsPaper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#NewsPaper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#StationHandTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Paddle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Paddle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#StationHandTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#PipeCooler -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#PipeCooler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#CoolingEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#PipeWarmer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#PipeWarmer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#HeatingEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#PuntyRod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#PuntyRod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#PipeWarmerHandTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Shield -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Shield">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#PersonalProtectiveEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Soffietta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Soffietta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#StationHandTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#SprucePine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#SprucePine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#GlassMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Torch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Torch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#StationHandTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Tweezer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Tweezer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#StationHandTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#StationHandTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#WelderSuit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#WelderSuit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#ProtectiveClothing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#WeldingGlove -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#WeldingGlove">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#Glove"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glassblowing#Yolk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glassblowing#Yolk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#EnviromentalEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulpark/glassblowing#OpenPalmGrip -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulpark/glassblowing#OpenPalmGrip">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glassblowing#OneHandGripTechnique"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
