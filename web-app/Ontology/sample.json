@@ -1,0 +1,69 @@
+{
+    "glassblowing.Maker": {
+        "glassblowing.AssistantMaker": {},
+        "glassblowing.GafferMaker": {}
+    },
+    "glassblowing.FixtureEquipment": {
+        "glassblowing.CoolingEquipment": [
+            "glassblowing.Annealer",
+            "glassblowing.CompressedAir",
+            "glassblowing.PipeCooler"
+        ],
+        "glassblowing.EnviromentalEquipment": [
+            "glassblowing.Marver",
+            "glassblowing.Yolk"
+        ],
+        "glassblowing.HeatingEquipment": [
+            "glassblowing.GloryHole",
+            "glassblowing.PipeWarmer"
+        ]
+    },
+    "glassblowing.Material": {
+        "glassblowing.GlassMaterial": [
+            "glassblowing.ColorRod",
+            "glassblowing.Frits",
+            "glassblowing.SprucePine"
+        ]
+    },
+    "glassblowing.Technique": {
+        "glassblowing.PressureTechnique": {
+            "glassblowing.BlowTechnique": {},
+            "glassblowing.SteamTechnique": {}
+        },
+        "glassblowing.GravityTechnique": {
+            "glassblowing.CentrifugalTechnique": {},
+            "glassblowing.CentripetalTechnique": {},
+            "glassblowing.WeightedTechnique": {}
+        },
+        "glassblowing.GripTechnique": {
+            "glassblowing.OneHandGripTechnique": [
+                "glassblowing.CrabWalkGrip",
+                "glassblowing.OpenPalmGrip"
+            ],
+            "glassblowing.TwoHandGripTechnique": {}
+        }
+    },
+    "glassblowing.HandTools": {
+        "glassblowing.PipeWarmerHandTools": [
+            "glassblowing.BlowPipe",
+            "glassblowing.PuntyRod"
+        ],
+        "glassblowing.StationHandTools": [
+            "glassblowing.Block",
+            "glassblowing.Jacks",
+            "glassblowing.NewsPaper",
+            "glassblowing.Paddle",
+            "glassblowing.Soffietta",
+            "glassblowing.Torch",
+            "glassblowing.Tweezer",
+            "glassblowing.Water"
+        ]
+    },
+    "glassblowing.PersonalProtectiveEquipment": {
+        "glassblowing.ProtectiveClothing": [
+            "glassblowing.Goggles",
+            "glassblowing.KevlarSleeves",
+            "glassblowing.WelderSuit"
+        ]
+    }
+}
