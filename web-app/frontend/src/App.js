@@ -9,6 +9,7 @@ import Material from "./components/Material";
 import Equipment from "./components/Equipment";
 import HandTools from "./components/HandTools";
 import Technique from "./components/Technique";
+import PPE from "./components/PPE";
 
 function App() {
   return (
@@ -56,12 +57,12 @@ const OntologyElement = ({ element, setOpen, open }) => {
   return (
     <div
       className={
-        open === element && !Array.isArray(ontology["Glassblowing"][element])
+        open === element
           ? styles.ontology_element_open
           : styles.ontology_element
       }
     >
-      {open === element && !Array.isArray(ontology["Glassblowing"][element]) ? (
+      {open === element ? (
         open === "Maker" ? (
           <Maker handleClick={handleClick} />
         ) : open === "FixtureEquipment" ? (
@@ -72,6 +73,8 @@ const OntologyElement = ({ element, setOpen, open }) => {
           <HandTools handleClick={handleClick} />
         ) : open === "Technique" ? (
           <Technique handleClick={handleClick} />
+        ) : open === "PersonalProtectiveEquipment" ? (
+          <PPE handleClick={handleClick} />
         ) : null
       ) : (
         // <Child

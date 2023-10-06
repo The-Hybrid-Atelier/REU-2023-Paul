@@ -70,6 +70,12 @@ const description = {
     "Tool used to shape the glass. Tweezer can also be used to give support as well. Sometimes used to break the glass from the blow pipe. This is also used to pick up water",
   Water:
     "Water is used to cool the glass. Water is picked up by the tweezer and the glass blower can apply it anywhere on the glass",
+  PersonalProtectiveEquipment:
+    "Personal protective equipment which is also known as PPE is equipment that is used to minimize harm and hazard to an individual. This webiste by the U.S. Department of Labor has extensive information https://www.osha.gov/personal-protective-equipment",
+  Shield:
+    "Equipment used to protect the glass blower from the extreme heat of the glory hole",
+  Kevlar:
+    "Kevlar sleeve is worn to help protect the glass blower from extreme heat. It can withstand heat up to 800 degree Fahrenheit",
 };
 
 export default description;
