@@ -1,0 +1,58 @@
+.ont_cnt{
+    padding: 0rem 3rem;
+    padding-bottom:2rem;
+}
+
+.parent_cnt header h1{
+    font-size: 3rem;
+}
+
+.content_des{
+    display:flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.child_cnt{
+    padding: 1rem 3rem;
+    background-color: #FDF3D8;
+    width: 90vw;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    border-radius: 1rem;
+}
+
+.instance_cnt{
+    padding: 1rem 3rem;
+    background-color: #F1FDD8;
+    border-radius: 1rem;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    transition: all 1s linear;
+}
+.child_element{
+    padding:0rem;
+    margin:0rem;
+}
+.instance_element{
+    padding:0rem;
+}
+
+.ont_main{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ont_main:hover::before{
+    content:"";
+    height:3rem;
+    width:3rem;
+    background-repeat: no-repeat;
+    background-image: url("../assets/arrow.svg");
+    background-position: center center;
+    margin-right:1rem;
+}
+

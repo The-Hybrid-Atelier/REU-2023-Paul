@@ -1,0 +1,67 @@
+{
+    "Glassblowing": {
+        "Maker": {
+            "AssistantMaker": {},
+            "GafferMaker": {}
+        },
+        "FixtureEquipment": {
+            "CoolingEquipment": [
+                "Annealer",
+                "CompressedAir",
+                "PipeCooler"
+            ],
+            "EnviromentalEquipment": [
+                "Marver",
+                "Yolk"
+            ],
+            "HeatingEquipment": [
+                "GloryHole",
+                "PipeWarmer"
+            ]
+        },
+        "Material": {
+            "GlassMaterial": [
+                "ColorRod",
+                "Frits",
+                "SprucePine"
+            ]
+        },
+        "Technique": {
+            "PressureTechnique": {
+                "BlowTechnique": {},
+                "SteamTechnique": {}
+            },
+            "GravityTechnique": {
+                "CentrifugalTechnique": {},
+                "CentripetalTechnique": {},
+                "WeightedTechnique": {}
+            },
+            "GripTechnique": {
+                "OneHandGripTechnique": [
+                    "CrabWalkGrip",
+                    "OpenPalmGrip"
+                ],
+                "TwoHandGripTechnique": {}
+            }
+        },
+        "HandTools": {
+            "PipeWarmerHandTools": [
+                "BlowPipe",
+                "PuntyRod"
+            ],
+            "StationHandTools": [
+                "Block",
+                "Jacks",
+                "NewsPaper",
+                "Paddle",
+                "Soffietta",
+                "Torch",
+                "Tweezer",
+                "Water"
+            ]
+        },
+        "PersonalProtectiveEquipment": [
+            "Shield"
+        ]
+    }
+}

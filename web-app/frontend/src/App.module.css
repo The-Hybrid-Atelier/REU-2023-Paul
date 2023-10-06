@@ -1,0 +1,131 @@
+.app{
+    width:100vw;
+    height:100vh;
+}
+.mainContent{
+    background-color: #FBD2D2;
+    width:100vw;
+    height:100vh;
+}
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    display:flex;
+    flex-direction: row;
+    flex-grow: 1;
+    height:10vh;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid black;
+    background-color: white;
+}
+
+.title{
+    background-color: #FFAA5B;
+    padding: .25rem 1rem;
+    border-radius: .5rem;
+    font-weight: 800;
+    margin-left: 3rem;
+}
+
+.about{
+    border: 1px solid black;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    margin-right: 3rem;
+}
+
+.content{
+    background-color: #FBD2D2;
+    height:100%;
+    padding-bottom: 15rem;
+}
+.body{
+    width: 100vw;
+    height: 90vh;
+    margin-top: 10vh;
+    overflow: scroll;
+}
+.footer{
+    position: fixed;
+    border: 2px black solid;
+    bottom:0;
+    /* top: 90vh; */
+    height: 10vh;
+    width:100vw;
+    display:flex;
+    align-items: center;
+    padding: 0rem 2rem;
+    background-color: white;
+}
+
+.about_content{
+    padding: 2rem;
+}
+
+.about_content p{
+    font-size: 1.5rem;
+}
+
+.about_content h1{
+    font-size: 3rem;
+}
+
+.ontology_element{
+    border: 1px solid black;
+    display:flex;
+    padding: 0rem 2rem;
+    align-items: center;
+    height: 10vh;
+    font-size: 3rem;
+}
+
+.ontology_element_open{
+    border: 1px solid black;
+    display:flex;
+    font-size: 3rem;
+}
+
+.ontology_element:hover::before{
+    content:"";
+    display:flex;
+    height:3rem;
+    width:3rem;
+    background-repeat: no-repeat;
+    background-image: url("./assets/arrow.svg");
+    background-position: center center;
+    margin-right:1rem;
+}
+.ontology_element:hover{
+    transition: height .2s, font-size .2s;
+    height:12vh;
+    font-size: 3.5rem;
+}
+
+.child_cnt{
+    display:flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.child_cnt h1{
+    font-size: 3rem;
+}
+
+.child_content{
+    animation: fadeIn 1s
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    75%{
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
